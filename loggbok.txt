@@ -1,2 +1,4 @@
 2022-04-28 15:02
     Uppstart av project med github
+2022-04-29 12:20
+    Startat med en någorlunda skiss, har påbörjat en mer indepth layout i figma.
