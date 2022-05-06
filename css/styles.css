@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --background-color: #EDEDED;
+    --gradient-end: #792ef5;
+    --gradient-start: #792ff5;
+    --container-color: #ffffff;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    display: grid;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    margin: 4em;
+    background-color: var(--background-color);
+    grid-template-columns: 1fr 4fr 6fr;
+    column-gap: 4em;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-bar, .contacts-panel > *, .messaging-area {
+    box-shadow: 0 0em .5em rgb(128, 128, 128);
+}
+
+.main-bar {
+    background: linear-gradient(0deg, var(--gradient-start), var(--gradient-end));
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.contacts-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    width: 3em;
+    height: 3em;
+    border-radius: 3em;
+}
+
+.contacts-panel > div, .messaging-area {
+    background-color: var(--container-color);
+    border-radius: 1em;
+    padding: 1.5em;
+}
+
+.friend-group, .friend {
+    display: flex;
+    border-bottom: 2px #e7e7e7 solid;
+    padding: 0 1em;
+}
+
+.contact-text {
+    padding-left: 2em;
+}
+
+.contacts-panel__friend-groups__title {
+    font-weight: bold;
+}
+
+.contacts-panel__search {
+    height: .75em;
+    padding: 0;
+}
+
+.contacts-panel__search > input {
+    border: none;
+    height: 100%;
+}
+
+.user-avatar {
+    position: relative;
+}
+
+.red-dot {
+    position: absolute;
+    width: .5em;
+    height: .5em;
+    background: red;
+    border: 3px var(--gradient-start) solid;
+    border-radius: 50%;
+    top: 2.15em;
+    left: 2.15em;
+}
+
+.main-bar__main-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+i::before {
+    font-size: 3em;
+    color: white;
+}
