@@ -4,3 +4,5 @@
     Startat med en någorlunda skiss, har påbörjat en mer indepth layout i figma.
 2022-05-06 12:11
     Större delar av layouten är klar, behöver dock fixa så att fontawesome fungerar, och alla positioneringar m. m.
+2022-05-12 15:21
+    Lyckades att gjöra å att man behöver scrolla nu, varför vet jag inte... Har laggt till några nya element och finslipatt padding, margin, positionering m.m.
