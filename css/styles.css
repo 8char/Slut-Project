@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-    --background-color: #EDEDED;
+    --muted-gray: #EDEDED;
     --gradient-end: #792ef5;
     --gradient-start: #792ff5;
     --container-color: #ffffff;
+    --recipient-color: #792ef5;
+    --sender-color: #ededed;
 }
 
 *, *::before, *::after {
@@ -15,7 +17,7 @@
 body {
     display: grid;
     margin: 2em;
-    background-color: var(--background-color);
+    background-color: var(--muted-gray);
     grid-template-columns: 1fr 4fr 6fr;
     column-gap: 2em;
     font-family: 'Montserrat', sans-serif;
@@ -49,7 +51,7 @@ img {
     border-radius: 3em;
 }
 
-.contacts-panel > div, .messaging-area {
+.contacts-panel > div, .messaging-area, .contacts-panel__search {
     background-color: var(--container-color);
     border-radius: 1em;
     padding: 1.5em;
@@ -81,11 +83,11 @@ img {
     position: absolute;
     width: .5em;
     height: .5em;
-    background: red;
-    border: 3px var(--gradient-start) solid;
+    background-color: lime;
+    border: 3px #000000 solid;
     border-radius: 50%;
-    top: 2.15em;
-    left: 2.15em;
+    top: 3em;
+    left: 3em;
 }
 
 .main-bar__main-buttons {
@@ -113,18 +115,120 @@ i::before {
     font-weight: bold;
 }
 
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.75em;
+    padding-inline: 0.25em;
+    border-bottom: 2px #e7e7e7 solid;
+}
+
 .user-info {
     display: flex;
-    justify-items: space-between;
-    padding-bottom: 0.75em;
-    border-bottom: 2px #e7e7e7 solid;
+    gap: 1em;
+    justify-content: space-between;
 }
 
 .user-info__text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-.user-info__text > img {
+.user-avatar > img {
+    width: 4em;
+    height: 4em;
+}
+
+.messaging-area i::before {
+    font-size: 200%;
+    color: black;
+}
+
+.user-header__buttons {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-status {
+    color: gray;
+}
+
+.contacts-panel__search {
+    height: 1em;
+    border: none;
+}
+
+.messaging-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.messaging-area__messages {
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.messaging-area__input {
+    width: 100%;
+}
+
+.input__input-wrapper {
+    display: flex;
+    gap: 1em;
+    max-width: 100%;
+    border-radius: 1em;
+    padding: 0.5em;
+    background-color: var(--muted-gray);
+}
+
+.input__input-wrapper > input {
+    border: none;
+    width: 100%;
+    background-color: var(--muted-gray);
+}
+
+.message-item--recipient, .message-item--sender {
+    display: flex;
+    flex-direction: column;
+    margin-block: 0.5em;
+}
+
+.message-item--sender {
+    align-self: flex-end;
+}
+
+.message-item--recipient {
+    align-self: flex-start;
+}
+
+.message-item--sender > .message-content {
     padding: 1em;
+    color: black;
+    background-color: var(--sender-color);
+    border-radius: 1em 1em 0 1em;
+}
+
+.message-item--recipient > .message-content {
+    padding: 1em;
+    color: white;
+    background-color: var(--recipient-color);
+    border-radius: 1em 1em 1em 0;
+}
+
+.message-item--sender > .message-date {
+    align-self: flex-end;
+}
+
+.message-item--recipient > .message-date {
+    align-self: flex-start;
+}
+
+*:focus {
+    outline: none;
 }

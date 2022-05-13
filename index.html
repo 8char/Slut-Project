@@ -23,9 +23,7 @@
         <i class="fa-solid fa-right-from-bracket"></i>
     </div>
     <div class="contacts-panel">
-        <div class="contacts-panel__search">
-            <input type="text">
-        </div>
+        <input class="contacts-panel__search" type="text" placeholder="Search...">
         <div class="contacts-panel__friend-groups">
             <span class="title">Groups</span>
             <div class="friend-group">
@@ -82,15 +80,41 @@
         </div>
     </div>
     <div class="messaging-area">
-        <div class="user-info">
-            <img src="./images/person.png" alt="Friend icon">
-            <div class="user-info__text">
-                <span class="title">John Bailey</span>
-                <span class="user-status">Online - Last seen at 1:00pm</span>
+        <div class="user-header">
+            <div class="user-info">
+                <img src="./images/person.png" alt="Friend icon">
+                <div class="user-info__text">
+                    <span class="title">John Bailey</span>
+                    <span class="user-status">Online - Last seen at 1:00pm</span>
+                </div>
             </div>
-            <i class="fas fa-solid fa-phone"></i>
-            <i class="fas fa-solid fa-video"></i>
-            <i class="fas fa-solid fa-ellipsis-vertical"></i>
+            <div class="user-header__buttons">
+                <i class="fas fa-solid fa-phone"></i>
+                <i class="fas fa-solid fa-video"></i>
+                <i class="fas fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+        <div class="messaging-area__messages">
+            <div class="message-item--recipient">
+                <span class="message-content">Hey how are you!</span>
+                <span class="message-date">Today at 4:23 PM</span>
+            </div>
+            <div class="message-item--sender">
+                <span class="message-content">I'm good, thanks for asking!</span>
+                <span class="message-date">Today at 4:45 PM</span>
+            </div>
+            <div class="message-item--sender">
+                <span class="message-content">You wanna do something later?</span>
+                <span class="message-date">Today at 4:45 PM</span>
+            </div>
+        </div>
+        <div class="messaging-area__input">
+            <div class="input__input-wrapper">
+                <i class="fas fa-solid fa-paperclip"></i>
+                <input type="text" placeholder="Send a message...">
+                <i class="fas fa-solid fa-face-grin-squint"></i>
+                <i class="fas fa-solid fa-camera"></i>
+            </div>
         </div>
     </div>
 </body>
